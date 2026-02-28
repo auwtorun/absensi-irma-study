@@ -19,6 +19,7 @@ export default function App() {
 
   const loadData = useCallback(() => setAbsensi(getAbsensi()), [])
   useEffect(() => { loadData() }, [loadData])
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }) }, [view])
 
   function handleDelete(id) {
     deleteAbsensi(id)
